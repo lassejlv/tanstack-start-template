@@ -18,4 +18,4 @@ COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/bun.lock ./bun.lock
 COPY  --from=builder /app/.output ./output
 
-CMD ["bun", "run", "output/server/index.mjs"]
+CMD ["bun", "run", ".output/server/index.mjs"]
